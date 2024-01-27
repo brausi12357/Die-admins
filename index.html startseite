@@ -107,7 +107,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   const user = users.find(u => u.username === username && u.password === password);
   if (user) {
     alert('Anmeldung erfolgreich! Willkommen ' + username);
-    window.location.href = 'bookings.html'; // Weiterleitung zur Buchungsseite
+    Buchungseite = 'bookings.html'; // Weiterleitung zur Buchungsseite
   } else {
     alert('Ungültige Anmeldeinformationen. Bitte versuche es erneut.');
   }
