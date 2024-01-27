@@ -1,75 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buchungsseite</title>
+<title>Anmeldung</title>
 <style>
-/* CSS-Stile */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.admins {
-    text-align: center;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-.table-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-table, th, td {
-    border: 1px solid #ccc;
-}
-th, td {
-    padding: 8px;
-    text-align: left;
-}
+/* Füge hier deine CSS-Stile ein */
 </style>
 </head>
 <body>
-<div class="header">
-    <h1>Willkommen</h1>
+<div class="container">
+  <h2>Anmeldung</h2>
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="username">Benutzername:</label>
+      <input type="text" id="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" required>
+    </div>
+    <button type="submit">Einloggen</button>
+  </form>
 </div>
-<div class="admins">
-    <p>Unsere ADMINS:</p>
-    <p>Erika</p>
-    <p>Max</p>
-    <p>Lisa</p>
-</div>
-<div class="table-container">
-    <h2>Buchungen</h2>
-    <table id="bookingTable">
-        <thead>
-            <tr>
-                <th>Datum</th>
-                <th>Uhrzeit</th>
-                <th>Grund</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>01.02.2022</td>
-                <td>10:00</td>
-                <td>Einkaufen</td>
-            </tr>
-            <tr>
-                <td>03.02.2022</td>
-                <td>15:30</td>
-                <td>Private Gespräche</td>
-            </tr>
-            <!-- Weitere Buchungen hier einfügen -->
-        </tbody>
-    </table>
-</div>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Verhindere das Absenden des Formulars
+  // Liste von Benutzername-Passwort-Paaren
+  const users = [
+    { username: 'Larsblasi', password: '7k20248' },
+    { username: 'N!CAD', password: '7kAD20242' },
+    { username: 'ERAD', password: '7kAD2024' },
+    { username: 'MaxiKnolle', password: '7k20244' }
+  ];
+  // Überprüfe die Anmeldeinformationen
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const user = users.find(u => u.username === username && u.password === password);
+  if (user) {
+    window.location.href = 'bookings.html'; // Weiterleitung zur Buchungsseite
+  } else {
+    alert('Ungültige Anmeldeinformationen. Bitte versuche es erneut.');
+  }
+});
+</script>
 </body>
 </html>
