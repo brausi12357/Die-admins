@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buchungen</title>
+<style>
+/* Füge hier deine CSS-Stile ein */
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Buchungen</h2>
+  <table id="bookingTable">
+    <thead>
+      <tr>
+        <th>Datum</th>
+        <th>Uhrzeit</th>
+        <th>Grund</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Hier werden die Buchungen eingefügt -->
+    </tbody>
+  </table>
+  <button id="logoutButton">Abmelden</button>
+</div>
+<script>
+// JavaScript-Code für die Buchungsseite
+// Hier kannst du JavaScript einfügen, um die Buchungsdaten anzuzeigen oder weitere Funktionen hinzuzufügen
+document.getElementById('logoutButton').addEventListener('click', function() {
+  // Bestätigungsnachricht und Weiterleitung zur Anmeldeseite
+  if (confirm('Möchten Sie sich wirklich abmelden?')) {
+    window.location.href = 'login.html'; // Zur Anmeldeseite weiterleiten
+  }
+});
+</script>
+</body>
+</html>
