@@ -22,6 +22,7 @@
     </div>
     <button type="submit">Einloggen</button>
   </form>
+  <p>Noch keinen Account? <a href="registration.html">Registrieren</a></p>
 </div>
 <script>
 document.getElementById('loginForm').addEventListener('submit', function(event) {
