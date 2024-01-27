@@ -3,42 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terminplanungs-System</title>
+<title>Buchungsseite</title>
 <style>
 /* CSS-Stile */
 body {
 font-family: Arial, sans-serif;
 margin: 20px;
 }
-.login-container, .booking-container, .table-container {
+.header {
+text-align: center;
+margin-bottom: 20px;
+}
+.admins {
+text-align: center;
+margin-bottom: 20px;
+font-style: italic;
+}
+.table-container {
 max-width: 800px;
-margin: 20px auto;
-padding: 20px;
-border: 1px solid #ccc;
-border-radius: 5px;
+margin: 0 auto;
 }
-.form-group {
-margin-bottom: 15px;
-}
-.form-group label {
-display: block;
-margin-bottom: 5px;
-}
-.form-group input, .form-group button, .form-group select {
-width: 100%;
-padding: 8px;
-border: 1px solid #ccc;
-border-radius: 3px;
-}
-.form-group button {
-background-color: #007bff;
-color: #fff;
-cursor: pointer;
-}
-.form-group button:hover {
-background-color: #0056b3;
-}
-/* Stile für die Tabelle */
 table {
 width: 100%;
 border-collapse: collapse;
@@ -50,69 +34,20 @@ th, td {
 padding: 8px;
 text-align: left;
 }
-/* Animationen */
-@keyframes fadeIn {
-from {
-opacity: 0;
-}
-to {
-opacity: 1;
-}
-}
-@keyframes fadeOut {
-from {
-opacity: 1;
-}
-to {
-opacity: 0;
-}
-}
 </style>
 </head>
 <body>
-<!-- Anmelde-Seite -->
-<div class="login-container">
-<h1>Anmeldung</h1>
-<div class="form-group">
-<label for="username">Benutzername:</label>
-<input type="text" id="username">
+<div class="header">
+<h1>Willkommen</h1>
 </div>
-<div class="form-group">
-<label for="password">Passwort:</label>
-<input type="password" id="password">
+<div class="admins">
+<p>Unsere ADMINS:</p>
+<p>Erika</p>
+<p>Max</p>
+<p>Lisa</p>
 </div>
-<div class="form-group">
-<button id="loginButton">Einloggen</button>
-</div>
-</div>
-<!-- Termin buchen Seite -->
-<div class="booking-container" style="display: none;">
-<h1>Termin buchen</h1>
-<div class="form-group">
-<label for="date">Datum:</label>
-<input type="date" id="date">
-</div>
-<div class="form-group">
-<label for="time">Uhrzeit:</label>
-<input type="time" id="time">
-</div>
-<div class="form-group">
-<label for="reason">Grund des Termins:</label>
-<select id="reason">
-<option value="Einkaufen">Einkaufen</option>
-<option value="Einfach nur Reden">Einfach nur Reden</option>
-<option value="Sonstiges">Sonstiges</option>
-<option value="Private Gespräche">Private Gespräche</option>
-</select>
-</div>
-<div class="form-group">
-<button id="bookButton">Termin buchen</button>
-<button id="logoutButton">Abmelden</button>
-</div>
-</div>
-<!-- Tabelle für Buchungen -->
-<div class="table-container" style="display: none;">
-<h1>Buchungen</h1>
+<div class="table-container">
+<h2>Buchungen</h2>
 <table id="bookingTable">
 <thead>
 <tr>
